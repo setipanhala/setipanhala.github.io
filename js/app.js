@@ -58,7 +58,7 @@
 	}, false);
 	Relay1.addEventListener('change', function(e)
 	{
-		publishUpdate({item: 'good', open: this.checked});
+		publishUpdate({item: 'Relay1', open: this.checked});
 	}, false);
 	Relay2.addEventListener('change', function(e)
 	{
