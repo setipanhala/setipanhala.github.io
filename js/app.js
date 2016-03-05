@@ -9,6 +9,9 @@
 	var pubnub = PUBNUB(settings);
 
 	var door = document.getElementById('door');
+	var Relay1 = document.getElementById('Relay1');
+	var Relay2 = document.getElementById('Relay2');
+	var Relay3 = document.getElementById('Relay3');
 	var lightLiving = document.getElementById('lightLiving');
 	var lightPorch = document.getElementById('lightPorch');
 	var fireplace = document.getElementById('fireplace');
@@ -49,10 +52,24 @@
 
 	// UI EVENTS
 
-	door.addEventListener('change', function(e){
+	door.addEventListener('change', function(e)
+	{
+		publishUpdate({item: 'good', open: this.checked});
+	}, false);
+	Relay1.addEventListener('change', function(e)
+	{
+		publishUpdate({item: 'good', open: this.checked});
+	}, false);
+	Relay2.addEventListener('change', function(e)
+	{
+		publishUpdate({item: 'good', open: this.checked});
+	}, false);
+	Relay3.addEventListener('change', function(e)
+	{
 		publishUpdate({item: 'good', open: this.checked});
 	}, false);
 
+	
 	lightLiving.addEventListener('change', function(e){
 		publishUpdate({item: 'light-living', brightness: +this.value});
 	}, false);
