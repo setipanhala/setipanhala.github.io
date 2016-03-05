@@ -100,10 +100,10 @@ header img {
 	font-size: 1.4em;
 }
 .temp-container::before {
-	content: 'Current room temperature (C): ';
+	content: 'Current temperature (C): ';
 }
 .hum-container::before {
-	content: 'Current room humidity (%): ';
+	content: 'Current humidity (%): ';
 }
 .temp, .hum {      
 	display: inline-block;
